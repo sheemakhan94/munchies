@@ -1,17 +1,6 @@
 import React from 'react'
 import './Business.css'
 
-const business = {
-  imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
-  name: "MarginOtto Pizzeria",
-  address: "1010 Paddington Way",
-  city: "Flavortown",
-  state: "NY",
-  zipCode: "10101",
-  category: "Italian",
-  rating: 4.5,
-  reviewCount: 90
-}
 
 class Business extends React.Component {
   render() {
@@ -23,17 +12,17 @@ class Business extends React.Component {
             alt=""
           />
         </div>
-        <h2>{business.name}</h2>
+        <h2>{this.props.name}</h2>
         <div className="Business-information">
           <div className="Business-address">
-            <p>{business.address}</p>
-            <p>{business.city}</p>
-            <p>{business.zipCode}</p>
+            <p>{this.props.address}</p>
+            <p>{this.props.city}</p>
+            <p>{this.props.zipCode}</p>
           </div>
           <div className="Business-reviews">
-            <h3>{business.category}</h3>
-            <h3 className="rating">{business.rating}</h3>
-            <p>{business.reviewCount}</p>
+            <h3>{this.props.category}</h3>
+            <h3 className="rating">{this.props.rating}</h3>
+            <p>{this.props.reviewCount}</p>
           </div>
         </div>
       </div>
